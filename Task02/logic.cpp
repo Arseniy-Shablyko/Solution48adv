@@ -21,24 +21,16 @@ string print_matrix(int** matrix, int N) {
 	return s;
 }
 
-int count_columns_with_no_zero_elements(int** matrix, int N) {
-	int counter = 0;
+int find_max_element(int** matrix, int N) {
+	int max = 0;
 
 	for (int i = 0; i < N; i++) {
-		bool is_zero = false;
-
 		for (int j = 0; j < N; j++) {
-			if (matrix[i][j] == 0) {
-				is_zero = true;
-				break;
+			if (matrix[i][j] > max) {
+				max = matrix[i][j];
 			}
-		}
-
-
-		if (is_zero == false) {
-			counter++;
 		}
 	}
 
-	return counter;
+	return max;
 }

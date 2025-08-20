@@ -14,8 +14,8 @@ int main() {
 	init(matrix, N);
 	cout << "Matrix: \n" << print_matrix(matrix, N) << endl;
 
-	int counter = count_columns_with_no_zero_elements(matrix, N);
-	cout << "Number of columns with no zero numbers: " << counter << endl;
+	int max = find_max_element(matrix, N);
+	cout << "Max matrix element: " << max << endl;
 
 	return 0;
 }
